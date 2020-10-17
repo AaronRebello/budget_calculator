@@ -1,0 +1,97 @@
+
+
+ <center>
+<div class="card card-body w-100  bg-primary">
+  <h3 style="color: yellow;">PassBook</h3>
+  <form action="/calculate" method="POST">
+  <div class="form-group">
+      <label for="title"> Enter Name</label>
+      <input type="text "class="form-control w-50" name="title" >
+    </div>
+    <div class="form-group">
+      <label for="type"><b>Select Type</b></label>
+      <select name="type" >
+        <option value="+">+</option>
+        <option value="-">-</option>
+        {{!-- <option value="expense">Expenses</option> --}}
+      </select>
+    </div>
+  
+    <div class="form-group">
+      <label for="amount">Enter $</label>
+      <input type="text "class="form-control w-50" name="amount" >
+    </div>
+   
+    <button type="submit" class="btn btn-warning">Add Amount</button>
+     <button type="reset" class="btn btn-warning">Reset</button>
+  </form>
+</div>
+</center> 
+<br>
+
+
+
+<div class="bg-primary " style="height: 150px;">
+
+  <form>
+  
+  <center>
+  <h5>Balance Details of Title: {{title}}</h5>
+ <div class="d-flex" style="justify-content: space-around;">
+ <div>  
+  <b>Total Income</b><br>
+<span>{{creditTotal}}</span>
+</div>
+
+<div class="ml-5">
+<b>Debit Amount</b><br>
+<span>{{debitTotal}}</span>
+</div>
+
+<div class="ml-5">
+<b>Left Over</b><br>
+<span>{{leftTotal}}</span>
+</div>
+
+
+</div>
+
+</center> 
+</form>
+<br>
+
+</div>  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+{{!-- <div class="jumbotron m-2">
+ <h4>Your Balance</h4>
+  <b>Total Income:</b><br>
+<input type="number" name="totalamount" value={{budget.amount}} readonly>
+<br>
+<b>Total Expenses:</b><br>
+<input type="number" name="totalexpamount"readonly>
+<br>
+<b>Left Over:</b><br>
+<input type="number" name="leftamount" readonly>
+</div> --}}
